@@ -1,0 +1,28 @@
+# Ignora todos os arquivos por padrão
+*
+
+# Permite o arquivo .gitignore
+!.gitignore
+
+# ----------------------------------------------------
+# Arquivos necessários para o funcionamento do web app
+# ----------------------------------------------------
+!index.html
+!style.css
+!script.js
+
+# ----------------------------------------------------
+# PDFs do projeto (PID, Scrum Guide, Regras do Jogo)
+# ----------------------------------------------------
+!*.pdf
+
+# ----------------------------------------------------
+# Arquivos Markdown de produção e fechamento de sprint
+# ----------------------------------------------------
+!acompanhamento_projeto/
+!acompanhamento_projeto/*.md
+
+# ----------------------------------------------------
+# Ignorar explicitamente a pasta skills do GitHub
+# ----------------------------------------------------
+skills/
