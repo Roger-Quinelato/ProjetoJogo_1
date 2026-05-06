@@ -19,6 +19,7 @@
 # ----------------------------------------------------
 # Arquivos Markdown de produção e fechamento de sprint
 # ----------------------------------------------------
+!README.md
 !acompanhamento_projeto/
 !acompanhamento_projeto/*.md
 

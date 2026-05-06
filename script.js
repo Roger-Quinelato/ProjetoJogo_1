@@ -410,25 +410,15 @@ function normalizePlayerData(data) {
 function loadPlayerData() {
   const storage = getStorage();
 
-  if (!storage) {
-    return getDefaultPlayerData();
+  if (storage) {
+    storage.removeItem(PLAYER_DATA_KEY);
   }
 
-  try {
-    const savedData = JSON.parse(storage.getItem(PLAYER_DATA_KEY));
-    return normalizePlayerData(savedData);
-  } catch {
-    return getDefaultPlayerData();
-  }
+  return getDefaultPlayerData();
 }
 
 function savePlayerData(data) {
   playerData = normalizePlayerData(data);
-  const storage = getStorage();
-
-  if (storage) {
-    storage.setItem(PLAYER_DATA_KEY, JSON.stringify(playerData));
-  }
 
   return playerData;
 }
